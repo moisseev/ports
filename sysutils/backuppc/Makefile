@@ -3,7 +3,7 @@
 
 PORTNAME=	backuppc
 PORTVERSION=	3.3.0
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	sysutils
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=	${PORTNAME}/${PORTNAME}/${PORTVERSION}
@@ -95,14 +95,14 @@ post-patch:
 		${WRKSRC}/doc/BackupPC.html ${WRKSRC}/doc/BackupPC.pod
 
 do-install:
-	if [ -f ${ETCDIR}/config.pl ]; then \
-		${MKDIR} ${STAGEDIR}${ETCDIR}; \
-		${CP} -p ${ETCDIR}/config.pl ${STAGEDIR}${ETCDIR}/config.pl; \
-	fi
-	if [ -f ${ETCDIR}/hosts ]; then \
-		${MKDIR} ${STAGEDIR}${ETCDIR}; \
-		${CP} -p ${ETCDIR}/hosts ${STAGEDIR}${ETCDIR}/hosts; \
-	fi
+#	if [ -f ${ETCDIR}/config.pl ]; then \
+#		${MKDIR} ${STAGEDIR}${ETCDIR}; \
+#		${CP} -p ${ETCDIR}/config.pl ${STAGEDIR}${ETCDIR}/config.pl; \
+#	fi
+#	if [ -f ${ETCDIR}/hosts ]; then \
+#		${MKDIR} ${STAGEDIR}${ETCDIR}; \
+#		${CP} -p ${ETCDIR}/hosts ${STAGEDIR}${ETCDIR}/hosts; \
+#	fi
 
 	cd ${WRKSRC} && ${PERL} configure.pl	\
 		--batch				\
@@ -125,13 +125,27 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${MANPREFIX}/man/man1
 	cd ${WRKSRC} && ${INSTALL_MAN} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 
-	if [ ! -f ${STAGEDIR}${ETCDIR}/config.pl.pre-${DISTVERSION} ]; then \
-		> ${STAGEDIR}${ETCDIR}/config.pl.pre-${DISTVERSION}; \
-	fi
-	${INSTALL} -d ${STAGEDIR}${PREFIX}/libexec/${PORTNAME}
-	cd ${STAGEDIR}${ETCDIR} && \
-		${CHGRP} wheel config.pl config.pl.pre-${DISTVERSION} && \
-		${MV} config.pl hosts config.pl.pre-${DISTVERSION} \
-			${STAGEDIR}${PREFIX}/libexec/${PORTNAME}/
+#	if [ ! -f ${STAGEDIR}${ETCDIR}/config.pl.pre-${DISTVERSION} ]; then \
+#		> ${STAGEDIR}${ETCDIR}/config.pl.pre-${DISTVERSION}; \
+#	fi
+#	${INSTALL} -d ${STAGEDIR}${PREFIX}/libexec/${PORTNAME}
+#	cd ${STAGEDIR}${ETCDIR} && \
+#		${CHGRP} wheel config.pl config.pl.pre-${DISTVERSION} && \
+#		${MV} config.pl hosts config.pl.pre-${DISTVERSION} \
+#			${STAGEDIR}${PREFIX}/libexec/${PORTNAME}/
+
+	${CP} ${WRKSRC}/conf/config.pl ${STAGEDIR}${ETCDIR}/config.pl.sample;
+	${CP} ${WRKSRC}/conf/hosts ${STAGEDIR}${ETCDIR}/hosts.sample;
+
+	${CP} ${WRKSRC}/configure.pl ${STAGEDIR}${ETCDIR}/update.pl
+	${REINPLACE_CMD} -E \
+		-e 's|^(use lib ")\.(/lib";)$$|\1${PREFIX}\2|' \
+		-e 's|^([[:blank:]]+if \( !\(\$$bpc = BackupPC::Lib->new\("\.", )"\."(, \$$confDir, 1\)\) \);)$$|\1$$opts{"install-dir"}\2|' \
+		-e 's|^(InstallFile\(")conf/hosts(", "\$$DestDir\$$Conf{ConfDir}/hosts", 0644\))$$|\1$$DestDir$$Conf{ConfDir}/hosts.sample\2|' \
+		-e 's|^(my \(\$$distConf, \$$distVars\) = ConfigParse\(")conf/config\.pl"\);$$|\1$$DestDir$$Conf{ConfDir}/config.pl.sample");|' \
+		${STAGEDIR}${ETCDIR}/update.pl
+
+#		-e 's|^\(use lib "\)\.\(/lib";\)$$|\1${PREFIX}\2|' \
+#		-e 's|\([[:blank:]]\{1,\}if ( !($$bpc = BackupPC::Lib->new("\.", \)"\."\(, $$confDir, 1)) );\)$$|\1$$opts{"install-dir"}\2|' \
 
 .include <bsd.port.mk>

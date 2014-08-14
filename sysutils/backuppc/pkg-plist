@@ -1,8 +1,4 @@
 @stopdaemon backuppc
-@unexec if cmp -s %D/%%ETCDIR%%/config.pl %D/%%ETCDIR%%/config.pl.sample; then rm -f %D/%%ETCDIR%%/config.pl; fi
-@unexec if cmp -s %D/%%ETCDIR%%/hosts %D/%%ETCDIR%%/hosts.sample; then rm -f %D/%%ETCDIR%%/hosts; fi
-@rmtry %%ETCDIR%%/config.pl.sample
-@rmtry %%ETCDIR%%/hosts.sample
 @mode 0555
 bin/BackupPC
 bin/BackupPC_archive
@@ -163,16 +159,10 @@ man/man1/backuppc.1.gz
 @group backuppc
 @dirrmtry %%ETCDIR%%
 @mode 0640
-libexec/backuppc/config.pl.pre-%%DISTVERSION%%
-@exec if [ -s %D/%F -a ! -f %D/%%ETCDIR%%/%f ]; then cp -p %D/%F %D/%%ETCDIR%%/; fi
-libexec/backuppc/config.pl
-@exec if [ ! -f %D/%%ETCDIR%%/%f ]; then cp -p %D/%F %D/%%ETCDIR%%/config.pl.sample; fi
-@exec cp -p %D/%F %D/%%ETCDIR%%/
+%%ETCDIR%%/config.pl.sample
 @mode 0644
-libexec/backuppc/hosts
-@exec if [ ! -f %D/%%ETCDIR%%/%f ]; then cp -p %D/%F %D/%%ETCDIR%%/hosts.sample; fi
-@exec cp -p %D/%F %D/%%ETCDIR%%/
+%%ETCDIR%%/hosts.sample
 @owner
 @group
 @mode
-@dirrm libexec/backuppc
+%%ETCDIR%%/update.pl
