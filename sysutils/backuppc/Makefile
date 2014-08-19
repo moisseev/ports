@@ -31,7 +31,8 @@ GROUPS=		backuppc
 
 CGIDIR?=	${PREFIX}/www/cgi-bin
 
-SUB_FILES=	pkg-deinstall pkg-message
+SUB_FILES=	pkg-deinstall pkg-message update.sh
+SUB_LIST=	CGIDIR=${CGIDIR}
 
 PLIST_SUB+=	CGIDIR=${CGIDIR:S,^${PREFIX}/,,} \
 		DISTVERSION=${DISTVERSION}
@@ -76,12 +77,18 @@ RUN_DEPENDS+=	smbclient:${PORTSDIR}/net/samba-smbclient
 RUN_DEPENDS+=	p5-XML-RSS>=0:${PORTSDIR}/textproc/p5-XML-RSS
 .endif
 
+pre-patch:
+	${CP} ${WRKSRC}/configure.pl ${WRKSRC}/update.pl
+
 post-patch:
 	@${REINPLACE_CMD} \
 		-e 's|/etc/BackupPC\(/config.pl\)|${ETCDIR}\1|' \
 		-e 's|^\(foreach my $$dir ( qw(bin \)doc$$|\1${DOCSDIR_REL}|' \
 		-e 's|\($$DestDir$$Conf{InstallDir}/\)doc|\1${DOCSDIR_REL}|' \
-		${WRKSRC}/configure.pl
+		${WRKSRC}/configure.pl ${WRKSRC}/update.pl
+	@${REINPLACE_CMD} -E \
+		-e 's|^(use lib ")\.(/lib";)$$|\1${PREFIX}\2|' \
+		${WRKSRC}/update.pl
 	@${REINPLACE_CMD} \
 		-e 's,"/doc/BackupPC.html","/${DOCSDIR_REL}/BackupPC.html",' \
 		${WRKSRC}/lib/BackupPC/CGI/View.pm
@@ -136,22 +143,7 @@ do-install:
 
 	${CP} ${WRKSRC}/conf/config.pl ${STAGEDIR}${ETCDIR}/config.pl.sample;
 	${CP} ${WRKSRC}/conf/hosts ${STAGEDIR}${ETCDIR}/hosts.sample;
-
-	${CP} ${WRKSRC}/configure.pl ${STAGEDIR}${ETCDIR}/update.pl
-	${REINPLACE_CMD} -E \
-		-e 's|^(use lib ")\.(/lib";)$$|\1${PREFIX}\2|' \
-		-e 's|^([[:blank:]]+if \( !\(\$$bpc = BackupPC::Lib->new\("\.", )"\."(, \$$confDir, 1\)\) \);)$$|\1$$opts{"install-dir"}\2|' \
-		-e 's|^(InstallFile\(")conf/hosts(", "\$$DestDir\$$Conf{ConfDir}/hosts", 0644\))$$|\1$$DestDir$$Conf{ConfDir}/hosts.sample\2|' \
-		-e 's|^(my \(\$$distConf, \$$distVars\) = ConfigParse\(")conf/config\.pl"\);$$|\1$$DestDir$$Conf{ConfDir}/config.pl.sample");|' \
-		-e '/^  - install the binaries, lib and docs in \$$Conf{InstallDir},$$/d' \
-		-e '/^  - create the data directory \$$Conf{TopDir},$$/d' \
-		-e 's|^(  - create/update the config\.pl file \$$Conf{ConfDir}/config\.pl,)$$|\1.|' \
-		-e '/^  - optionally install the cgi-bin interface.$$/d' \
-		-e '/^# Create install directories$$/,/^printf\("Making Apache configuration file for suid-perl\\n"\);$$/d' \
-		-e '/^InstallFile\("httpd\/src\/BackupPC\.conf", "httpd\/BackupPC\.conf", 0644\);$$/,/^}$$/d' \
-		${STAGEDIR}${ETCDIR}/update.pl
-
-#		-e 's|^\(use lib "\)\.\(/lib";\)$$|\1${PREFIX}\2|' \
-#		-e 's|\([[:blank:]]\{1,\}if ( !($$bpc = BackupPC::Lib->new("\.", \)"\."\(, $$confDir, 1)) );\)$$|\1$$opts{"install-dir"}\2|' \
+	${CP} ${WRKSRC}/update.pl ${STAGEDIR}${ETCDIR}/update.pl
+	${CP} ${WRKDIR}/update.sh ${STAGEDIR}${ETCDIR}/update.sh
 
 .include <bsd.port.mk>

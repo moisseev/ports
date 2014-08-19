@@ -1,10 +1,8 @@
 ==========================================================================
- - You need to customize %%ETCDIR%%/config.pl .
+ - If this is a new installation or version upgrade,
+    to create/update configuration you should run
 
-     If this is an upgrade, install BackupPC from port (not from package)
-     and make sure the full path of the existing BackupPC
-     configuration directory is %%ETCDIR%% .
-     Otherwise you will need to make changes in config.pl by hand.
+     %%ETCDIR%%/update.sh
 
  - Add the following line to /etc/rc.conf to enable BackupPC:
 

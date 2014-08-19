@@ -164,5 +164,7 @@ man/man1/backuppc.1.gz
 %%ETCDIR%%/hosts.sample
 @owner
 @group
-@mode
+@mode 0544
 %%ETCDIR%%/update.pl
+%%ETCDIR%%/update.sh
+@mode
