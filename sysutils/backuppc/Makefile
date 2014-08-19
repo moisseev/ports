@@ -143,6 +143,12 @@ do-install:
 		-e 's|^([[:blank:]]+if \( !\(\$$bpc = BackupPC::Lib->new\("\.", )"\."(, \$$confDir, 1\)\) \);)$$|\1$$opts{"install-dir"}\2|' \
 		-e 's|^(InstallFile\(")conf/hosts(", "\$$DestDir\$$Conf{ConfDir}/hosts", 0644\))$$|\1$$DestDir$$Conf{ConfDir}/hosts.sample\2|' \
 		-e 's|^(my \(\$$distConf, \$$distVars\) = ConfigParse\(")conf/config\.pl"\);$$|\1$$DestDir$$Conf{ConfDir}/config.pl.sample");|' \
+		-e '/^  - install the binaries, lib and docs in \$$Conf{InstallDir},$$/d' \
+		-e '/^  - create the data directory \$$Conf{TopDir},$$/d' \
+		-e 's|^(  - create/update the config\.pl file \$$Conf{ConfDir}/config\.pl,)$$|\1.|' \
+		-e '/^  - optionally install the cgi-bin interface.$$/d' \
+		-e '/^# Create install directories$$/,/^printf\("Making Apache configuration file for suid-perl\\n"\);$$/d' \
+		-e '/^InstallFile\("httpd\/src\/BackupPC\.conf", "httpd\/BackupPC\.conf", 0644\);$$/,/^}$$/d' \
 		${STAGEDIR}${ETCDIR}/update.pl
 
 #		-e 's|^\(use lib "\)\.\(/lib";\)$$|\1${PREFIX}\2|' \
