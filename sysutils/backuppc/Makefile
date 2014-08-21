@@ -141,9 +141,10 @@ do-install:
 #		${MV} config.pl hosts config.pl.pre-${DISTVERSION} \
 #			${STAGEDIR}${PREFIX}/libexec/${PORTNAME}/
 
-	${CP} ${WRKSRC}/conf/config.pl ${STAGEDIR}${ETCDIR}/config.pl.sample;
-	${CP} ${WRKSRC}/conf/hosts ${STAGEDIR}${ETCDIR}/hosts.sample;
-	${CP} ${WRKSRC}/update.pl ${STAGEDIR}${ETCDIR}/update.pl
+	${CP} ${WRKSRC}/conf/config.pl ${STAGEDIR}${ETCDIR}/config.pl.sample
+	${CP} ${WRKSRC}/conf/hosts ${STAGEDIR}${ETCDIR}/hosts.sample
 	${CP} ${WRKDIR}/update.sh ${STAGEDIR}${ETCDIR}/update.sh
+	${MKDIR} ${STAGEDIR}${PREFIX}/libexec/backuppc
+	${CP} ${WRKSRC}/update.pl ${STAGEDIR}${PREFIX}/libexec/backuppc/update.pl
 
 .include <bsd.port.mk>

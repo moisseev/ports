@@ -165,6 +165,7 @@ man/man1/backuppc.1.gz
 @owner
 @group
 @mode 0544
-%%ETCDIR%%/update.pl
 %%ETCDIR%%/update.sh
+libexec/backuppc/update.pl
 @mode
+@dirrm libexec/backuppc
