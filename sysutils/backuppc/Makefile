@@ -38,13 +38,18 @@ PLIST_SUB+=	CGIDIR=${CGIDIR:S,^${PREFIX}/,,} \
 PORTDOCS=	ChangeLog LICENSE README
 
 OPTIONS_DEFINE=		ARCHIVE_ZIP COMPRESS_ZLIB DOCS FILE_RSYNCP NMBLOOKUP \
-			RRDTOOL SMBCLIENT XML_RSS
-OPTIONS_DEFAULT=	ARCHIVE_ZIP COMPRESS_ZLIB
+			SMBCLIENT XML_RSS
+
+OPTIONS_RADIO=		GRAPHS
+OPTIONS_RADIO_GRAPHS=	RRD_GRAPHS RRDTOOL
+
+OPTIONS_DEFAULT=	ARCHIVE_ZIP COMPRESS_ZLIB RRD_GRAPHS
 
 ARCHIVE_ZIP_DESC=	Perl module for Zip archive files
 COMPRESS_ZLIB_DESC=	Perl5 interface to zlib compression library
 FILE_RSYNCP_DESC=	Perl Rsync client
 NMBLOOKUP_DESC=		NetBIOS Name lookup tool
+RRD_GRAPHS_DESC=	Apply graphs patch (but not install RRDTool)
 RRDTOOL_DESC=		Use RRDTool to generate pool statistic graphs
 SMBCLIENT_DESC=		Samba client
 XML_RSS_DESC=		Perl extension to manage RSS files
@@ -65,6 +70,8 @@ RUN_DEPENDS+=	nmblookup:${PORTSDIR}/net/samba-nmblookup
 .endif
 .if ${PORT_OPTIONS:MRRDTOOL}
 RUN_DEPENDS+=	rrdtool:${PORTSDIR}/databases/rrdtool
+.endif
+.if ${PORT_OPTIONS:MRRD_GRAPHS} || ${PORT_OPTIONS:MRRDTOOL}
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-bin-BackupPC \
 		${FILESDIR}/extra-patch-lib-BackupPC-CGI-GeneralInfo.pm
 .endif
