@@ -8,9 +8,9 @@
 
      backuppc_enable="YES"
 
- - Data directory is /var/db/BackupPC .
+ - Data directory is /var/db/BackupPC
 
-     This is where all the PC backup data is stored.
+     This is where all the backup data is stored.
      This file system needs to be big enough
      to accommodate all the PCs you expect to backup.
 ==========================================================================

@@ -23,8 +23,6 @@ USE_RC_SUBR=	backuppc
 
 USES=		perl5
 NO_BUILD=	yes
-NO_PACKAGE=	Overwrites configuration files; set FORCE_PACKAGE if you want\
-		to build this package
 
 USERS=		backuppc
 GROUPS=		backuppc
@@ -78,7 +76,7 @@ RUN_DEPENDS+=	p5-XML-RSS>=0:${PORTSDIR}/textproc/p5-XML-RSS
 .endif
 
 pre-patch:
-	${CP} ${WRKSRC}/configure.pl ${WRKSRC}/update.pl
+	@${CP} ${WRKSRC}/configure.pl ${WRKSRC}/update.pl
 
 post-patch:
 	@${REINPLACE_CMD} \
@@ -102,15 +100,6 @@ post-patch:
 		${WRKSRC}/doc/BackupPC.html ${WRKSRC}/doc/BackupPC.pod
 
 do-install:
-#	if [ -f ${ETCDIR}/config.pl ]; then \
-#		${MKDIR} ${STAGEDIR}${ETCDIR}; \
-#		${CP} -p ${ETCDIR}/config.pl ${STAGEDIR}${ETCDIR}/config.pl; \
-#	fi
-#	if [ -f ${ETCDIR}/hosts ]; then \
-#		${MKDIR} ${STAGEDIR}${ETCDIR}; \
-#		${CP} -p ${ETCDIR}/hosts ${STAGEDIR}${ETCDIR}/hosts; \
-#	fi
-
 	cd ${WRKSRC} && ${PERL} configure.pl	\
 		--batch				\
 		--backuppc-user ${USERS}	\
@@ -131,15 +120,6 @@ do-install:
 		${WRKSRC}/doc/BackupPC.pod ${WRKSRC}/${PORTNAME}.1
 	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${MANPREFIX}/man/man1
 	cd ${WRKSRC} && ${INSTALL_MAN} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
-
-#	if [ ! -f ${STAGEDIR}${ETCDIR}/config.pl.pre-${DISTVERSION} ]; then \
-#		> ${STAGEDIR}${ETCDIR}/config.pl.pre-${DISTVERSION}; \
-#	fi
-#	${INSTALL} -d ${STAGEDIR}${PREFIX}/libexec/${PORTNAME}
-#	cd ${STAGEDIR}${ETCDIR} && \
-#		${CHGRP} wheel config.pl config.pl.pre-${DISTVERSION} && \
-#		${MV} config.pl hosts config.pl.pre-${DISTVERSION} \
-#			${STAGEDIR}${PREFIX}/libexec/${PORTNAME}/
 
 	${CP} ${WRKSRC}/conf/config.pl ${STAGEDIR}${ETCDIR}/config.pl.sample
 	${CP} ${WRKSRC}/conf/hosts ${STAGEDIR}${ETCDIR}/hosts.sample
