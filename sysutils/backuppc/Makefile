@@ -1,5 +1,5 @@
 # Created by: Alexander Moisseev <moiseev@mezonplus.ru>
-# $FreeBSD: head/sysutils/backuppc/Makefile 364771 2014-08-13 09:46:00Z marino $
+# $FreeBSD: head/sysutils/backuppc/Makefile 366216 2014-08-26 14:11:30Z wg $
 
 PORTNAME=	backuppc
 PORTVERSION=	3.3.0
@@ -127,7 +127,6 @@ do-install:
 		${WRKSRC}/doc/BackupPC.pod ${WRKSRC}/${PORTNAME}.1
 	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${MANPREFIX}/man/man1
 	cd ${WRKSRC} && ${INSTALL_MAN} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
-
 	${CP} ${WRKSRC}/conf/config.pl ${STAGEDIR}${ETCDIR}/config.pl.sample
 	${CP} ${WRKSRC}/conf/hosts ${STAGEDIR}${ETCDIR}/hosts.sample
 	${CP} ${WRKDIR}/update.sh ${STAGEDIR}${ETCDIR}/update.sh

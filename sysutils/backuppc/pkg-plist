@@ -76,8 +76,7 @@ lib/BackupPC/Zip/FileMember.pm
 lib/Net/FTP/AutoReconnect.pm
 lib/Net/FTP/RetrHandle.pm
 man/man1/backuppc.1.gz
-@comment CGI uses the BackupPC.html as a documentation page.
-%%DOCSDIR%%/BackupPC.html
+%%PORTDOCS%%%%DOCSDIR%%/BackupPC.html
 %%PORTDOCS%%%%DOCSDIR%%/BackupPC.pod
 %%WWWDIR%%/0000000.gif
 %%WWWDIR%%/0000011.gif
@@ -140,7 +139,6 @@ man/man1/backuppc.1.gz
 @dirrm lib/BackupPC
 @dirrm lib/Net/FTP
 @dirrm lib/Net
-@dirrm %%DOCSDIR%%
 @dirrmtry %%WWWDIR%%
 @dirrmtry %%CGIDIR%%
 @exec install -d -o backuppc -g backuppc -m 0750 /var/log/BackupPC
@@ -159,9 +157,9 @@ man/man1/backuppc.1.gz
 @group backuppc
 @dirrmtry %%ETCDIR%%
 @mode 0640
-%%ETCDIR%%/config.pl.sample
+@sample %%ETCDIR%%/config.pl.sample
 @mode 0644
-%%ETCDIR%%/hosts.sample
+@sample %%ETCDIR%%/hosts.sample
 @owner
 @group
 @mode 0544
