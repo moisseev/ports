@@ -127,6 +127,8 @@ do-install:
 		${WRKSRC}/doc/BackupPC.pod ${WRKSRC}/${PORTNAME}.1
 	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${MANPREFIX}/man/man1
 	cd ${WRKSRC} && ${INSTALL_MAN} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
+	${RM} ${STAGEDIR}${ETCDIR}/config.pl
+	${RM} ${STAGEDIR}${ETCDIR}/hosts
 	${CP} ${WRKSRC}/conf/config.pl ${STAGEDIR}${ETCDIR}/config.pl.sample
 	${CP} ${WRKSRC}/conf/hosts ${STAGEDIR}${ETCDIR}/hosts.sample
 	${CP} ${WRKDIR}/update.sh ${STAGEDIR}${ETCDIR}/update.sh
