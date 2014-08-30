@@ -141,8 +141,6 @@ man/man1/backuppc.1.gz
 @dirrm lib/BackupPC
 @dirrm lib/Net/FTP
 @dirrm lib/Net
-@comment Main html doc should be unconditionally installed.
-@dirrm %%DOCSDIR%%
 @dirrmtry %%WWWDIR%%
 @dirrmtry %%CGIDIR%%
 @exec install -d -o backuppc -g backuppc -m 0750 /var/log/BackupPC
