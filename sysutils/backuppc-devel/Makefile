@@ -33,7 +33,8 @@ GROUPS=		backuppc
 DOCSDIR=	${PREFIX}/share/doc/BackupPC
 CGIDIR?=	${PREFIX}/www/cgi-bin
 
-SUB_FILES=	pkg-deinstall pkg-message
+SUB_FILES=	pkg-deinstall pkg-message update.sh
+SUB_LIST=	CGIDIR=${CGIDIR}
 
 PLIST_SUB+=	CGIDIR=${CGIDIR:S,^${PREFIX}/,,} \
 		DISTVERSION=${DISTVERSION}
@@ -72,10 +73,16 @@ RUN_DEPENDS+=	smbclient:${PORTSDIR}/net/samba-smbclient
 RUN_DEPENDS+=	p5-XML-RSS>=0:${PORTSDIR}/textproc/p5-XML-RSS
 .endif
 
+pre-patch:
+	@${CP} ${WRKSRC}/configure.pl ${WRKSRC}/update.pl
+
 post-patch:
 	@${REINPLACE_CMD} \
 		-e 's|/etc/BackupPC\(/config.pl\)|${ETCDIR}\1|' \
-		${WRKSRC}/configure.pl
+		${WRKSRC}/configure.pl ${WRKSRC}/update.pl
+	@${REINPLACE_CMD} -E \
+		-e 's|^(use lib ")\.(/lib";)$$|\1${PREFIX}\2|' \
+		${WRKSRC}/update.pl
 	@${REINPLACE_CMD} \
 		-e 's|STDERR "Please su |STDERR "Please su [-m] |' \
 		${WRKSRC}/lib/BackupPC/Lib.pm
@@ -86,15 +93,6 @@ post-patch:
 		${WRKSRC}/doc/BackupPC.html ${WRKSRC}/doc/BackupPC.pod
 
 do-install:
-	if [ -f ${ETCDIR}/config.pl ]; then \
-		${MKDIR} ${STAGEDIR}${ETCDIR}; \
-		${CP} -p ${ETCDIR}/config.pl ${STAGEDIR}${ETCDIR}/config.pl; \
-	fi
-	if [ -f ${ETCDIR}/hosts ]; then \
-		${MKDIR} ${STAGEDIR}${ETCDIR}; \
-		${CP} -p ${ETCDIR}/hosts ${STAGEDIR}${ETCDIR}/hosts; \
-	fi
-
 	cd ${WRKSRC} && ${PERL} configure.pl	\
 		--batch				\
 		--backuppc-user ${USERS}	\
@@ -114,14 +112,13 @@ do-install:
 		${WRKSRC}/doc/BackupPC.pod ${WRKSRC}/${PORTNAME}.1
 	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${MANPREFIX}/man/man1
 	cd ${WRKSRC} && ${INSTALL_MAN} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
-
-	if [ ! -f ${STAGEDIR}${ETCDIR}/config.pl.pre-${DISTVERSION} ]; then \
-		> ${STAGEDIR}${ETCDIR}/config.pl.pre-${DISTVERSION}; \
-	fi
-	${INSTALL} -d ${STAGEDIR}${PREFIX}/libexec/${PORTNAME}
-	cd ${STAGEDIR}${ETCDIR} && \
-		${CHGRP} wheel config.pl config.pl.pre-${DISTVERSION} && \
-		${MV} config.pl hosts config.pl.pre-${DISTVERSION} \
-			${STAGEDIR}${PREFIX}/libexec/${PORTNAME}/
+	${CP} ${WRKSRC}/doc/BackupPC.html ${STAGEDIR}${WWWDIR}
+	${RM} ${STAGEDIR}${ETCDIR}/config.pl
+	${RM} ${STAGEDIR}${ETCDIR}/hosts
+	${CP} ${WRKSRC}/conf/config.pl ${STAGEDIR}${ETCDIR}/config.pl.sample
+	${CP} ${WRKSRC}/conf/hosts ${STAGEDIR}${ETCDIR}/hosts.sample
+	${CP} ${WRKDIR}/update.sh ${STAGEDIR}${ETCDIR}/update.sh
+	${MKDIR} ${STAGEDIR}${PREFIX}/libexec/backuppc
+	${CP} ${WRKSRC}/update.pl ${STAGEDIR}${PREFIX}/libexec/backuppc/update.pl
 
 .include <bsd.port.mk>
