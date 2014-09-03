@@ -157,6 +157,8 @@ man/man1/backuppc.1.gz
 @owner backuppc
 @group backuppc
 @dirrmtry %%ETCDIR%%
+@comment .sample files actually are templates for the configuration script
+@comment and should not be installed as working configuration files.
 @mode 0640
 %%ETCDIR%%/config.pl.sample
 @mode 0644
