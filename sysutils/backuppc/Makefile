@@ -115,7 +115,6 @@ do-install:
 		--html-dir ${WWWDIR}		\
 		--html-dir-url /${PORTNAME}	\
 		--install-dir ${PREFIX}		\
-		--log-dir /var/log/BackupPC	\
 		--no-set-perms			\
 		--uid-ignore
 

@@ -7,5 +7,4 @@ perl %%PREFIX%%/libexec/backuppc/update.pl \
     --fhs \
     --html-dir %%WWWDIR%% \
     --html-dir-url /backuppc \
-    --install-dir %%PREFIX%% \
-    --log-dir /var/log/BackupPC
+    --install-dir %%PREFIX%%
