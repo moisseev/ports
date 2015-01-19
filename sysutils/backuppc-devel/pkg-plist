@@ -1,4 +1,3 @@
-@stopdaemon backuppc
 @mode 0555
 bin/BackupPC
 bin/BackupPC_Admin_SCGI
