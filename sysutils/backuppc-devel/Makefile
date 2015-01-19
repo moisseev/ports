@@ -97,6 +97,7 @@ do-install:
 	cd ${WRKSRC} && ${PERL} configure.pl	\
 		--batch				\
 		--backuppc-user ${USERS}	\
+		--bin-path perl=${PERL}		\
 		--config-dir ${ETCDIR}		\
 		--cgi-dir ${CGIDIR}		\
 		--data-dir /var/db/BackupPC	\
