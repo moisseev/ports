@@ -137,9 +137,9 @@ man/man1/backuppc.1.gz
 @comment .sample files actually are templates for the configuration script
 @comment and should not be installed as working configuration files.
 @mode 0640
-@sample %%ETCDIR%%/config.pl.sample
+%%ETCDIR%%/config.pl.sample
 @mode 0644
-@sample %%ETCDIR%%/hosts.sample
+%%ETCDIR%%/hosts.sample
 @owner
 @group
 @mode 0544
