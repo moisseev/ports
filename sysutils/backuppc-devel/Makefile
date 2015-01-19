@@ -1,16 +1,17 @@
 # Created by: Alexander Moisseev <moiseev@mezonplus.ru>
-# $FreeBSD$
+# $FreeBSD: head/sysutils/backuppc-devel/Makefile 376298 2015-01-05 13:18:58Z marino $
 
 PORTNAME=	backuppc
 DISTVERSION=	4.0.0alpha3
 CATEGORIES=	sysutils
+PORTREVISION=	1
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=	${PORTNAME}/${PORTNAME}-beta/${DISTVERSION}
 PKGNAMESUFFIX=	-devel
 DISTNAME=	BackupPC-${DISTVERSION}
 
 MAINTAINER=	moiseev@mezonplus.ru
-COMMENT=	System for backing PCs and laptops to a server
+COMMENT=	Multi-platform backup to disk-based storage
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -104,6 +105,7 @@ do-install:
 		--html-dir ${WWWDIR}		\
 		--html-dir-url /${PORTNAME}	\
 		--install-dir ${PREFIX}		\
+		--log-dir /var/log/BackupPC	\
 		--no-set-perms			\
 		--uid-ignore
 
