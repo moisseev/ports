@@ -127,11 +127,7 @@ man/man1/backuppc.1.gz
 @group backuppc
 @mode 04554
 %%CGIDIR%%/BackupPC_Admin
-@owner
-@group
 @mode
-@owner backuppc
-@group backuppc
 @dir /var/run/BackupPC
 @dir /var/log/BackupPC
 @dir /var/db/BackupPC/cpool
