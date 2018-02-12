@@ -2,7 +2,7 @@
 # $FreeBSD: head/sysutils/backuppc-devel/Makefile 458739 2018-01-11 14:18:01Z danfe $
 
 PORTNAME=	backuppc
-PORTVERSION=	4.1.4.20171125
+PORTVERSION=	4.1.6.20180212
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-devel
 
@@ -12,21 +12,22 @@ COMMENT=	Multi-platform backup to disk-based storage
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-EXTRACT_DEPENDS=	p5-BackupPC-XS>=0.53:sysutils/p5-BackupPC-XS
+EXTRACT_DEPENDS=	p5-BackupPC-XS>=0.57:sysutils/p5-BackupPC-XS
 RUN_DEPENDS=	p5-CGI>0:www/p5-CGI \
 		p5-File-Listing>=0:sysutils/p5-File-Listing \
-		p5-BackupPC-XS>=0.53:sysutils/p5-BackupPC-XS
+		p5-BackupPC-XS>=0.57:sysutils/p5-BackupPC-XS
 
 CONFLICTS=	backuppc backuppc4
+
+USES=		perl5
 
 USE_RC_SUBR=	backuppc
 
 USE_GITHUB=	yes
-GH_TAGNAME=	6939ca9
+GH_TAGNAME=	3990160
 
 WRKSRC_SUBDIR=	dist/BackupPC-${PORTVERSION}
 
-USES=		perl5
 USE_PERL5=	extract
 NO_BUILD=	yes
 NO_ARCH=	yes
