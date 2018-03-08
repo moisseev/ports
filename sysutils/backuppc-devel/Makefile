@@ -2,7 +2,7 @@
 # $FreeBSD: head/sysutils/backuppc-devel/Makefile 463878 2018-03-08 08:39:47Z yuri $
 
 PORTNAME=	backuppc
-DISTVERSION=	4.1.6.20180212
+DISTVERSION=	4.1.6.20180308
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-devel
 
@@ -21,7 +21,7 @@ CONFLICTS=	backuppc backuppc4
 
 USES=		perl5
 USE_GITHUB=	yes
-GH_TAGNAME=	3990160
+GH_TAGNAME=	1752fd8
 USE_PERL5=	extract
 NO_BUILD=	yes
 NO_ARCH=	yes
