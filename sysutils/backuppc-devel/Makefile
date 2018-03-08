@@ -1,8 +1,8 @@
 # Created by: Alexander Moisseev <moiseev@mezonplus.ru>
-# $FreeBSD: head/sysutils/backuppc-devel/Makefile 458739 2018-01-11 14:18:01Z danfe $
+# $FreeBSD: head/sysutils/backuppc-devel/Makefile 463878 2018-03-08 08:39:47Z yuri $
 
 PORTNAME=	backuppc
-PORTVERSION=	4.1.6.20180212
+DISTVERSION=	4.1.6.20180212
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-devel
 
@@ -20,17 +20,14 @@ RUN_DEPENDS=	p5-CGI>0:www/p5-CGI \
 CONFLICTS=	backuppc backuppc4
 
 USES=		perl5
-
-USE_RC_SUBR=	backuppc
-
 USE_GITHUB=	yes
 GH_TAGNAME=	3990160
-
-WRKSRC_SUBDIR=	dist/BackupPC-${PORTVERSION}
-
 USE_PERL5=	extract
 NO_BUILD=	yes
 NO_ARCH=	yes
+USE_RC_SUBR=	backuppc
+
+WRKSRC_SUBDIR=	dist/BackupPC-${PORTVERSION}
 
 USERS=		backuppc
 GROUPS=		backuppc
