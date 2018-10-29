@@ -2,7 +2,7 @@
 # $FreeBSD: head/sysutils/backuppc-devel/Makefile 464141 2018-03-11 04:59:56Z linimon $
 
 PORTNAME=	backuppc
-DISTVERSION=	4.2.2.20180521
+DISTVERSION=	4.2.2.20181029
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-devel
 
@@ -21,11 +21,11 @@ RUN_DEPENDS=	p5-CGI>0:www/p5-CGI \
 BROKEN=		fails to build under qemu: uncaught target signal 11 (Segmetation fault) - core dumped
 .endif
 
-CONFLICTS=	backuppc backuppc4
+CONFLICTS_INSTALL=	backuppc backuppc4
 
 USES=		perl5
 USE_GITHUB=	yes
-GH_TAGNAME=	3b6a945
+GH_TAGNAME=	961d6b9
 USE_PERL5=	extract
 NO_BUILD=	yes
 NO_ARCH=	yes
