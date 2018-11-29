@@ -2,7 +2,7 @@
 # $FreeBSD: head/sysutils/backuppc-devel/Makefile 464141 2018-03-11 04:59:56Z linimon $
 
 PORTNAME=	backuppc
-DISTVERSION=	4.2.2.20181108
+DISTVERSION=	4.3.0.20181129
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-devel
 
@@ -25,7 +25,7 @@ CONFLICTS_INSTALL=	backuppc backuppc4
 
 USES=		perl5
 USE_GITHUB=	yes
-GH_TAGNAME=	ce6cba1
+GH_TAGNAME=	074bff3
 USE_PERL5=	extract
 NO_BUILD=	yes
 NO_ARCH=	yes
