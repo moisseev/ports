@@ -1,0 +1,9 @@
+freebsd_instance:
+    image_family: freebsd-12-1
+
+task:
+    name: portlint
+    install_script: pkg install -y portlint
+    pwd_script: pwd
+    ll_script: ls -l
+    lint_script: cd mail/rspamd-devel && portlint -C
