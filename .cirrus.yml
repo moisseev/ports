@@ -11,7 +11,16 @@ task:
       }
       EOF
     - echo DEVELOPER=yes >> /etc/make.conf
+
   install_dependencies_script: pkg install -y portlint
   portlint_script:
     - portlint -V || true
     - cd mail/rspamd-devel && portlint -C
+
+  ll_ports_tree_script: ls -l /usr/ports
+  portsnap_fetch_extract_script:
+    - portsnap --interactive fetch
+    - portsnap extract Templates
+    - portsnap extract Tools
+  ll_ports_tree_again_script: ls -l /usr/ports
+  ll_bsd_gcc_mk_script: ls -l /usr/ports/Mk/bsd.gcc.mk
