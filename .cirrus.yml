@@ -12,15 +12,20 @@ task:
       EOF
     - echo DEVELOPER=yes >> /etc/make.conf
 
-  install_dependencies_script: pkg install -y portlint
+  install_portlint_depends_script: pkg install -y portlint
   portlint_script:
     - portlint -V || true
     - cd mail/rspamd-devel && portlint -C
 
-  ll_ports_tree_script: ls -l /usr/ports
-  portsnap_fetch_extract_script:
-    - portsnap --interactive fetch
-    - portsnap extract Templates
-    - portsnap extract Tools
-  ll_ports_tree_again_script: ls -l /usr/ports
-  ll_bsd_gcc_mk_script: ls -l /usr/ports/Mk/bsd.gcc.mk
+  portsnap_fetch_script:
+   - portsnap --interactive fetch
+   - date -r `cut -f 2 -d '|' /var/db/portsnap/tag`
+  portsnap_extract_script: portsnap extract
+
+  install_build_depends_script: >
+    pkg install -y
+    ragel cmake ninja pkgconf perl5 pcre icu libsodium hyperscan luajit glib gettext-runtime sqlite3
+  build_script: cd mail/rspamd-devel && make stage && make check-orphans && make package
+  install_run_depends_script: pkg install -y ca_root_nss
+  install_script: cd mail/rspamd-devel && make install clean
+  run_script: service rspamd start
