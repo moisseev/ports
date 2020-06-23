@@ -10,6 +10,7 @@ task:
         url: "pkg+http://pkg.FreeBSD.org/\${ABI}/latest"
       }
       EOF
+    - echo BATCH=yes >> /etc/make.conf
     - echo DEVELOPER=yes >> /etc/make.conf
 
   install_portlint_depends_script: pkg install -y portlint
@@ -25,6 +26,7 @@ task:
   install_build_depends_script: >
     pkg install -y
     ragel cmake ninja pkgconf perl5 pcre icu libsodium hyperscan luajit glib gettext-runtime sqlite3
+
   build_script: cd mail/rspamd-devel && make stage && make check-orphans && make package
   install_run_depends_script: pkg install -y ca_root_nss
   install_script: cd mail/rspamd-devel && make install clean
