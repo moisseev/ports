@@ -10,21 +10,34 @@ task:
         url: "pkg+http://pkg.FreeBSD.org/\${ABI}/latest"
       }
       EOF
-    - echo BATCH=yes >> /etc/make.conf
-    - echo DEVELOPER=yes >> /etc/make.conf
+    - |
+      cat >> /etc/make.conf <<EOF
+      BATCH=yes
+      DEVELOPER=yes
+      PORTSDIR=/tmp/ports
+      EOF
 
-  git_version_script: git --version
-  svn_version_script: svn --version
+  pkg_info_script: pkg info
+
+  install_subversion_script: pkg install -y subversion
+  fetch_ports_framework_script:
+    - mkdir /tmp/ports
+    - svn co svn://svn.FreeBSD.org/ports/head /tmp/ports --depth files
+    - cd /tmp/ports
+    - svn co svn://svn.FreeBSD.org/ports/head/Keywords
+    - svn co svn://svn.FreeBSD.org/ports/head/Mk
+    - svn co svn://svn.FreeBSD.org/ports/head/Templates
+    - svn co svn://svn.FreeBSD.org/ports/head/Tools
+
+  # portsnap_fetch_script:
+  #  - portsnap --interactive fetch
+  #  - date -r `cut -f 2 -d '|' /var/db/portsnap/tag`
+  # portsnap_extract_script: portsnap extract
 
   install_portlint_depends_script: pkg install -y portlint
   portlint_script:
     - portlint -V || true
     - cd mail/rspamd-devel && portlint -C
-
-  portsnap_fetch_script:
-   - portsnap --interactive fetch
-   - date -r `cut -f 2 -d '|' /var/db/portsnap/tag`
-  portsnap_extract_script: portsnap extract
 
   install_build_depends_script: >
     pkg install -y
