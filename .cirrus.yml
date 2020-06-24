@@ -13,6 +13,9 @@ task:
     - echo BATCH=yes >> /etc/make.conf
     - echo DEVELOPER=yes >> /etc/make.conf
 
+  git_version_script: git --version
+  svn_version_script: svn --version
+
   install_portlint_depends_script: pkg install -y portlint
   portlint_script:
     - portlint -V || true
@@ -30,4 +33,4 @@ task:
   build_script: cd mail/rspamd-devel && make stage && make check-orphans && make package
   install_run_depends_script: pkg install -y ca_root_nss
   install_script: cd mail/rspamd-devel && make install clean
-  run_script: service rspamd start
+  run_script: service rspamd onestart
