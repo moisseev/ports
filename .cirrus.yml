@@ -17,7 +17,8 @@ task:
       PORTSDIR=/tmp/ports
       EOF
 
-  pkg_info_script: pkg info
+  pkg_upgrade_script: pkg upgrade -y
+  pkg_version_script: pkg version -vRL=
 
   install_subversion_script: pkg install -y subversion
   fetch_ports_framework_script:
