@@ -17,10 +17,8 @@ task:
       PORTSDIR=/tmp/ports
       EOF
 
-  pkg_upgrade_script: pkg upgrade -y
-  pkg_version_script: pkg version -vRL=
-
-  install_subversion_script: pkg install -y subversion
+  install_svn_depends_script: pkg install -y sqlite3
+  install_svn_script: pkg install -y subversion
   fetch_ports_framework_script:
     - mkdir /tmp/ports
     - svn co svn://svn.FreeBSD.org/ports/head /tmp/ports --depth files
@@ -29,13 +27,16 @@ task:
     - svn co svn://svn.FreeBSD.org/ports/head/Mk
     - svn co svn://svn.FreeBSD.org/ports/head/Templates
     - svn co svn://svn.FreeBSD.org/ports/head/Tools
+    - svn co svn://svn.FreeBSD.org/ports/head/lang/perl5.30 /tmp/ports/lang/perl5.30 --depth empty
+    - cd /tmp/ports/lang/perl5.30
+    - svn up version.mk
 
   # portsnap_fetch_script:
   #  - portsnap --interactive fetch
   #  - date -r `cut -f 2 -d '|' /var/db/portsnap/tag`
   # portsnap_extract_script: portsnap extract
 
-  install_portlint_depends_script: pkg install -y portlint
+  install_portlint_script: pkg install -y portlint
   portlint_script:
     - portlint -V || true
     - cd mail/rspamd-devel && portlint -C
@@ -47,4 +48,5 @@ task:
   build_script: cd mail/rspamd-devel && make stage && make check-orphans && make package
   install_run_depends_script: pkg install -y ca_root_nss
   install_script: cd mail/rspamd-devel && make install clean
+  pkg_version_script: pkg version -vRL=
   run_script: service rspamd onestart
