@@ -270,6 +270,7 @@ man/man8/rspamd.8.gz
 %%DATADIR%%/rules/bitcoin.lua
 %%DATADIR%%/rules/content.lua
 %%DATADIR%%/rules/controller/init.lua
+%%DATADIR%%/rules/controller/maps.lua
 %%DATADIR%%/rules/controller/selectors.lua
 %%DATADIR%%/rules/forwarding.lua
 %%DATADIR%%/rules/headers_checks.lua
@@ -286,9 +287,11 @@ man/man8/rspamd.8.gz
 %%DATADIR%%/www/README.md
 %%DATADIR%%/www/apple-touch-icon.png
 %%DATADIR%%/www/browserconfig.xml
+%%DATADIR%%/www/css/FooTable.Glyphicons.css
 %%DATADIR%%/www/css/bootstrap.min.css
 %%DATADIR%%/www/css/d3evolution.css
-%%DATADIR%%/www/css/footable.bootstrap.min.css
+%%DATADIR%%/www/css/font-glyphicons.css
+%%DATADIR%%/www/css/footable.standalone.min.css
 %%DATADIR%%/www/css/nprogress.css
 %%DATADIR%%/www/css/rspamd.css
 %%DATADIR%%/www/favicon-16x16.png
@@ -309,7 +312,7 @@ man/man8/rspamd.8.gz
 %%DATADIR%%/www/js/app/stats.js
 %%DATADIR%%/www/js/app/symbols.js
 %%DATADIR%%/www/js/app/upload.js
-%%DATADIR%%/www/js/lib/bootstrap.min.js
+%%DATADIR%%/www/js/lib/bootstrap.bundle.min.js
 %%DATADIR%%/www/js/lib/d3.min.js
 %%DATADIR%%/www/js/lib/d3evolution.min.js
 %%DATADIR%%/www/js/lib/d3pie.min.js
