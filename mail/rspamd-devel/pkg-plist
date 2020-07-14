@@ -293,6 +293,7 @@ man/man8/rspamd.8.gz
 %%DATADIR%%/www/css/font-glyphicons.css
 %%DATADIR%%/www/css/footable.standalone.min.css
 %%DATADIR%%/www/css/nprogress.css
+%%DATADIR%%/www/css/prism.css
 %%DATADIR%%/www/css/rspamd.css
 %%DATADIR%%/www/css/svg-with-js.min.css
 %%DATADIR%%/www/favicon-16x16.png
@@ -314,14 +315,17 @@ man/man8/rspamd.8.gz
 %%DATADIR%%/www/js/app/symbols.js
 %%DATADIR%%/www/js/app/upload.js
 %%DATADIR%%/www/js/lib/bootstrap.bundle.min.js
+%%DATADIR%%/www/js/lib/codejar.min.js
 %%DATADIR%%/www/js/lib/d3.min.js
 %%DATADIR%%/www/js/lib/d3evolution.min.js
 %%DATADIR%%/www/js/lib/d3pie.min.js
 %%DATADIR%%/www/js/lib/fontawesome.min.js
 %%DATADIR%%/www/js/lib/footable.min.js
-%%DATADIR%%/www/js/lib/jquery-3.4.1.min.js
+%%DATADIR%%/www/js/lib/jquery-3.5.1.min.js
 %%DATADIR%%/www/js/lib/jquery.stickytabs.min.js
+%%DATADIR%%/www/js/lib/linenumbers.min.js
 %%DATADIR%%/www/js/lib/nprogress.min.js
+%%DATADIR%%/www/js/lib/prism.js
 %%DATADIR%%/www/js/lib/require.min.js
 %%DATADIR%%/www/js/lib/solid.min.js
 %%DATADIR%%/www/js/lib/visibility.min.js
