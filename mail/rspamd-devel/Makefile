@@ -1,7 +1,7 @@
 # $FreeBSD: head/mail/rspamd-devel/Makefile 530274 2020-04-02 11:26:53Z vsevolod $
 
 PORTNAME=	rspamd
-PORTVERSION=	2.6.a1.20200718
+PORTVERSION=	2.6.a1.20200719
 CATEGORIES=	mail
 PKGNAMESUFFIX=	-devel
 
@@ -56,7 +56,7 @@ CMAKE_ARGS+=	-DCONFDIR=${PREFIX}/etc/rspamd \
 		-DDEBUG=ON \
 		-DGIT_ID=${GH_TAGNAME}
 USE_GITHUB=	yes
-GH_TAGNAME=	d4aaaec
+GH_TAGNAME=	22d86e9
 
 DEBUG_FLAGS=	-g -O0
 
