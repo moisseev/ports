@@ -162,6 +162,7 @@ man/man8/rspamd.8.gz
 %%DATADIR%%/lualib/lua_ffi/common.lua
 %%DATADIR%%/lualib/lua_ffi/dkim.lua
 %%DATADIR%%/lualib/lua_ffi/init.lua
+%%DATADIR%%/lualib/lua_ffi/linalg.lua
 %%DATADIR%%/lualib/lua_ffi/spf.lua
 %%DATADIR%%/lualib/lua_fuzzy.lua
 %%DATADIR%%/lualib/lua_lexer.lua
