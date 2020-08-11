@@ -269,6 +269,7 @@ man/man8/rspamd.8.gz
 %%DATADIR%%/plugins/url_redirector.lua
 %%DATADIR%%/plugins/whitelist.lua
 %%DATADIR%%/rules/bitcoin.lua
+%%DATADIR%%/rules/bounce.lua
 %%DATADIR%%/rules/content.lua
 %%DATADIR%%/rules/controller/init.lua
 %%DATADIR%%/rules/controller/maps.lua
