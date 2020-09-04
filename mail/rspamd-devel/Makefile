@@ -1,7 +1,7 @@
 # $FreeBSD: head/mail/rspamd-devel/Makefile 530274 2020-04-02 11:26:53Z vsevolod $
 
 PORTNAME=	rspamd
-PORTVERSION=	2.6.a1.20200903
+PORTVERSION=	2.6.a1.20200904
 CATEGORIES=	mail
 PKGNAMESUFFIX=	-devel
 
@@ -56,14 +56,14 @@ CMAKE_ARGS+=	-DCONFDIR=${PREFIX}/etc/rspamd \
 		-DDEBUG=ON \
 		-DGIT_ID=${GH_TAGNAME}
 USE_GITHUB=	yes
-GH_TAGNAME=	a742fed
+GH_TAGNAME=	1b474db
 
 DEBUG_FLAGS=	-g -O0
 
 USE_RC_SUBR=	rspamd
 
 BLAS_CMAKE_ON=	-DENABLE_BLAS=ON
-BLAS_LIB_DEPENDS=	liblapack.so:math/lapack
+BLAS_LIB_DEPENDS=	libblis.so:math/blis liblapack.so:math/lapack
 BLAS_USES=	blaslapack:openblas
 
 GPERF_CMAKE_ON=	-DENABLE_GPERF_TOOLS=ON
