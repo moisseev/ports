@@ -2,7 +2,7 @@
 # $FreeBSD: head/sysutils/backuppc-devel/Makefile 537471 2020-06-01 09:29:52Z mikael $
 
 PORTNAME=	backuppc
-DISTVERSION=	4.4.0.20201003
+DISTVERSION=	4.4.0.20201006
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-devel
 
@@ -26,7 +26,7 @@ BROKEN=		fails to build under qemu: uncaught target signal 11 (Segmetation fault
 CONFLICTS_INSTALL=	backuppc backuppc4
 
 USE_GITHUB=	yes
-GH_TAGNAME=	5b5a1e6
+GH_TAGNAME=	bab0a97
 USE_PERL5=	extract
 NO_BUILD=	yes
 NO_ARCH=	yes
