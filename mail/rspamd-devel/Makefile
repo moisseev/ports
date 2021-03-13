@@ -1,4 +1,4 @@
-# $FreeBSD: head/mail/rspamd-devel/Makefile 554311 2020-11-06 18:53:51Z vsevolod $
+# $FreeBSD: head/mail/rspamd-devel/Makefile 568112 2021-03-11 17:40:27Z vsevolod $
 
 PORTNAME=	rspamd
 PORTVERSION=	2.8.a1.20210312
@@ -17,7 +17,7 @@ LIB_DEPENDS=	libpcre.so:devel/pcre \
 BUILD_DEPENDS=	ragel:devel/ragel
 RUN_DEPENDS=	ca_root_nss>=3.*:security/ca_root_nss
 
-USES=		cmake gnome perl5 pkgconfig sqlite ssl
+USES=		cmake gnome perl5 pkgconfig sqlite ssl compiler:c++17-lang
 USE_LDCONFIG=	yes
 USE_PERL5=	build run
 USE_GNOME=	glib20
