@@ -1,4 +1,4 @@
-# $FreeBSD: head/mail/rspamd-devel/Makefile 568112 2021-03-11 17:40:27Z vsevolod $
+# $FreeBSD: head/mail/rspamd-devel/Makefile 569111 2021-03-24 11:38:59Z vsevolod $
 
 PORTNAME=	rspamd
 PORTVERSION=	2.8.a1.20210325
@@ -88,8 +88,6 @@ CGP_RUN_DEPENDS+=	\
 .if ${ARCH:Mpowerpc*}
 LUAJIT_LIB_DEPENDS=	libluajit-5.1.so:lang/luajit-openresty
 USES+=		compiler:gcc-c++11-lib
-.else
-USES+=		compiler:c11
 .endif
 
 post-install:
