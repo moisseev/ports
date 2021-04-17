@@ -1,7 +1,5 @@
 #!/bin/sh
 
-# $FreeBSD: head/mail/rspamd-devel/files/rspamd.in 554311 2020-11-06 18:53:51Z vsevolod $
-#
 # PROVIDE: rspamd
 # REQUIRE: LOGIN redis
 # BEFORE:  mail

@@ -1,5 +1,3 @@
-# $FreeBSD: head/mail/rspamd-devel/Makefile 569111 2021-03-24 11:38:59Z vsevolod $
-
 PORTNAME=	rspamd
 PORTVERSION=	2.8.a2.20210416
 CATEGORIES=	mail
