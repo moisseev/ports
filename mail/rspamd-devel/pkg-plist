@@ -226,6 +226,7 @@ man/man8/rspamd.8.gz
 %%DATADIR%%/lualib/rspamadm/mime.lua
 %%DATADIR%%/lualib/rspamadm/rescore.lua
 %%DATADIR%%/lualib/rspamadm/stat_convert.lua
+%%DATADIR%%/lualib/rspamadm/statistics_dump.lua
 %%DATADIR%%/lualib/rspamadm/template.lua
 %%DATADIR%%/lualib/rspamadm/vault.lua
 %%DATADIR%%/lualib/tableshape.lua
