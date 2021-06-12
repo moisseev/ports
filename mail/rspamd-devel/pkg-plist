@@ -33,6 +33,7 @@ etc/newsyslog.conf.d/rspamd.newsyslog.conf
 %%ETCDIR%%/modules.d/dmarc.conf
 %%ETCDIR%%/modules.d/elastic.conf
 %%ETCDIR%%/modules.d/emails.conf
+%%ETCDIR%%/modules.d/external_relay.conf
 %%ETCDIR%%/modules.d/external_services.conf
 %%ETCDIR%%/modules.d/force_actions.conf
 %%ETCDIR%%/modules.d/forged_recipients.conf
@@ -242,6 +243,7 @@ man/man8/rspamd.8.gz
 %%DATADIR%%/plugins/dynamic_conf.lua
 %%DATADIR%%/plugins/elastic.lua
 %%DATADIR%%/plugins/emails.lua
+%%DATADIR%%/plugins/external_relay.lua
 %%DATADIR%%/plugins/external_services.lua
 %%DATADIR%%/plugins/force_actions.lua
 %%DATADIR%%/plugins/forged_recipients.lua
