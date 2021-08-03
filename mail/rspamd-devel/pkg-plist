@@ -210,6 +210,7 @@ man/man8/rspamd.8.gz
 %%DATADIR%%/lualib/lua_util.lua
 %%DATADIR%%/lualib/lua_verdict.lua
 %%DATADIR%%/lualib/lupa.lua
+%%DATADIR%%/lualib/plugins/dmarc.lua
 %%DATADIR%%/lualib/plugins/neural.lua
 %%DATADIR%%/lualib/plugins/rbl.lua
 %%DATADIR%%/lualib/plugins_stats.lua
