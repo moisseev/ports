@@ -25,6 +25,7 @@ etc/newsyslog.conf.d/rspamd.newsyslog.conf
 %%ETCDIR%%/modules.d/antivirus.conf
 %%ETCDIR%%/modules.d/arc.conf
 %%ETCDIR%%/modules.d/asn.conf
+%%ETCDIR%%/modules.d/aws_s3.conf
 %%ETCDIR%%/modules.d/chartable.conf
 %%ETCDIR%%/modules.d/clickhouse.conf
 %%ETCDIR%%/modules.d/dcc.conf
@@ -238,6 +239,7 @@ man/man8/rspamd.8.gz
 %%DATADIR%%/plugins/antivirus.lua
 %%DATADIR%%/plugins/arc.lua
 %%DATADIR%%/plugins/asn.lua
+%%DATADIR%%/plugins/aws_s3.lua
 %%DATADIR%%/plugins/bayes_expiry.lua
 %%DATADIR%%/plugins/clickhouse.lua
 %%DATADIR%%/plugins/clustering.lua
