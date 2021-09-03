@@ -1,7 +1,7 @@
 # Created by: Alexander Moisseev <moiseev@mezonplus.ru>
 
 PORTNAME=	backuppc
-DISTVERSION=	4.4.1.20210425
+DISTVERSION=	4.4.1.20210903
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-devel
 
@@ -25,7 +25,7 @@ BROKEN=		fails to build under qemu: uncaught target signal 11 (Segmetation fault
 CONFLICTS_INSTALL=	backuppc backuppc4
 
 USE_GITHUB=	yes
-GH_TAGNAME=	697837f
+GH_TAGNAME=	a3ce91c
 USE_PERL5=	extract
 NO_BUILD=	yes
 NO_ARCH=	yes
