@@ -184,6 +184,7 @@ man/man8/rspamd.8.gz
 %%DATADIR%%/lualib/lua_redis.lua
 %%DATADIR%%/lualib/lua_scanners/avast.lua
 %%DATADIR%%/lualib/lua_scanners/clamav.lua
+%%DATADIR%%/lualib/lua_scanners/cloudmark.lua
 %%DATADIR%%/lualib/lua_scanners/common.lua
 %%DATADIR%%/lualib/lua_scanners/dcc.lua
 %%DATADIR%%/lualib/lua_scanners/fprot.lua
