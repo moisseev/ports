@@ -1,3 +1,3 @@
-TIMESTAMP = 1641277226
-SHA256 (rspamd-rspamd-3.2.a1.20220104-afc7ea0_GH0.tar.gz) = b04175e7890a08bd97a1db5e327c45c5b440d4fa263959d3425e2968c4dab55e
-SIZE (rspamd-rspamd-3.2.a1.20220104-afc7ea0_GH0.tar.gz) = 5631892
+TIMESTAMP = 1642230711
+SHA256 (rspamd-rspamd-3.2.a1.20220115-0956f41_GH0.tar.gz) = cb48f16bd6bbd1be28bfcac9b210cd33197479eed2bb6e2472dca37fae5526b9
+SIZE (rspamd-rspamd-3.2.a1.20220115-0956f41_GH0.tar.gz) = 5641500
