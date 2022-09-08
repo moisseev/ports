@@ -5,6 +5,7 @@ PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	vsevolod@FreeBSD.org
 COMMENT=	Fast spam filtering system dev version
+WWW=		https://rspamd.com/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
