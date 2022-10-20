@@ -80,7 +80,7 @@ GPERF_CMAKE_ON=		-DENABLE_GPERF_TOOLS=ON
 HYPERSCAN_LIB_DEPENDS=	libhs.so:devel/hyperscan
 HYPERSCAN_CMAKE_ON=	-DENABLE_HYPERSCAN=ON
 
-LUAJIT_LIB_DEPENDS=	libluajit-5.1.so:lang/luajit
+LUAJIT_USES=		luajit
 LUAJIT_USES_OFF=	lua:51+
 LUAJIT_CMAKE_OFF=	-DENABLE_LUAJIT=OFF
 
@@ -88,9 +88,6 @@ LUAJIT_CMAKE_OFF=	-DENABLE_LUAJIT=OFF
 
 .if ${ARCH} == powerpc64
 CMAKE_ARGS+=		-DENABLE_LTO:BOOL=OFF
-LUAJIT_LIB_DEPENDS=	libluajit-5.1.so:lang/luajit-openresty
-.elif ${ARCH} == powerpc64le
-LUAJIT_LIB_DEPENDS=	libluajit-5.1.so:lang/luajit-openresty
 .endif
 
 post-install:
