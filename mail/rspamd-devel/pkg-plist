@@ -182,6 +182,12 @@ man/man8/rspamd.8.gz
 %%DATADIR%%/lualib/lua_mime.lua
 %%DATADIR%%/lualib/lua_mime_types.lua
 %%DATADIR%%/lualib/lua_redis.lua
+%%DATADIR%%/lualib/redis_scripts/neural_maybe_invalidate.lua
+%%DATADIR%%/lualib/redis_scripts/neural_maybe_lock.lua
+%%DATADIR%%/lualib/redis_scripts/neural_save_unlock.lua
+%%DATADIR%%/lualib/redis_scripts/neural_train_size.lua
+%%DATADIR%%/lualib/redis_scripts/ratelimit_check.lua
+%%DATADIR%%/lualib/redis_scripts/ratelimit_update.lua
 %%DATADIR%%/lualib/lua_scanners/avast.lua
 %%DATADIR%%/lualib/lua_scanners/clamav.lua
 %%DATADIR%%/lualib/lua_scanners/cloudmark.lua
