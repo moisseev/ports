@@ -231,6 +231,7 @@ man/man8/rspamd.8.gz
 %%DATADIR%%/lualib/rspamadm/configwizard.lua
 %%DATADIR%%/lualib/rspamadm/cookie.lua
 %%DATADIR%%/lualib/rspamadm/corpus_test.lua
+%%DATADIR%%/lualib/rspamadm/dkim_keygen.lua
 %%DATADIR%%/lualib/rspamadm/dmarc_report.lua
 %%DATADIR%%/lualib/rspamadm/dns_tool.lua
 %%DATADIR%%/lualib/rspamadm/fuzzy_convert.lua
