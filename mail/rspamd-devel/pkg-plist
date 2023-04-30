@@ -70,6 +70,7 @@ etc/newsyslog.conf.d/rspamd.newsyslog.conf
 %%ETCDIR%%/modules.d/trie.conf
 %%ETCDIR%%/modules.d/url_redirector.conf
 %%ETCDIR%%/modules.d/whitelist.conf
+%%ETCDIR%%/lang_detection.inc
 %%ETCDIR%%/options.inc
 %%ETCDIR%%/rspamd.conf
 @sample %%ETCDIR%%/rspamd.newsyslog.conf.sample
