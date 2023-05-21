@@ -300,6 +300,7 @@ man/man8/rspamd.8.gz
 %%DATADIR%%/rules/bitcoin.lua
 %%DATADIR%%/rules/bounce.lua
 %%DATADIR%%/rules/content.lua
+%%DATADIR%%/rules/controller/fuzzy.lua
 %%DATADIR%%/rules/controller/init.lua
 %%DATADIR%%/rules/controller/maps.lua
 %%DATADIR%%/rules/controller/neural.lua
