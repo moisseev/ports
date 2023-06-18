@@ -225,6 +225,7 @@ man/man8/rspamd.8.gz
 %%DATADIR%%/lualib/plugins/neural.lua
 %%DATADIR%%/lualib/plugins/rbl.lua
 %%DATADIR%%/lualib/plugins_stats.lua
+%%DATADIR%%/lualib/redis_scripts/ratelimit_cleanup_pending.lua
 %%DATADIR%%/lualib/rescore_utility.lua
 %%DATADIR%%/lualib/rspamadm/clickhouse.lua
 %%DATADIR%%/lualib/rspamadm/configgraph.lua
