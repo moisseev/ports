@@ -183,12 +183,6 @@ man/man8/rspamd.8.gz
 %%DATADIR%%/lualib/lua_mime.lua
 %%DATADIR%%/lualib/lua_mime_types.lua
 %%DATADIR%%/lualib/lua_redis.lua
-%%DATADIR%%/lualib/redis_scripts/neural_maybe_invalidate.lua
-%%DATADIR%%/lualib/redis_scripts/neural_maybe_lock.lua
-%%DATADIR%%/lualib/redis_scripts/neural_save_unlock.lua
-%%DATADIR%%/lualib/redis_scripts/neural_train_size.lua
-%%DATADIR%%/lualib/redis_scripts/ratelimit_check.lua
-%%DATADIR%%/lualib/redis_scripts/ratelimit_update.lua
 %%DATADIR%%/lualib/lua_scanners/avast.lua
 %%DATADIR%%/lualib/lua_scanners/clamav.lua
 %%DATADIR%%/lualib/lua_scanners/cloudmark.lua
@@ -225,7 +219,13 @@ man/man8/rspamd.8.gz
 %%DATADIR%%/lualib/plugins/neural.lua
 %%DATADIR%%/lualib/plugins/rbl.lua
 %%DATADIR%%/lualib/plugins_stats.lua
+%%DATADIR%%/lualib/redis_scripts/neural_maybe_invalidate.lua
+%%DATADIR%%/lualib/redis_scripts/neural_maybe_lock.lua
+%%DATADIR%%/lualib/redis_scripts/neural_save_unlock.lua
+%%DATADIR%%/lualib/redis_scripts/neural_train_size.lua
+%%DATADIR%%/lualib/redis_scripts/ratelimit_check.lua
 %%DATADIR%%/lualib/redis_scripts/ratelimit_cleanup_pending.lua
+%%DATADIR%%/lualib/redis_scripts/ratelimit_update.lua
 %%DATADIR%%/lualib/rescore_utility.lua
 %%DATADIR%%/lualib/rspamadm/clickhouse.lua
 %%DATADIR%%/lualib/rspamadm/configgraph.lua
