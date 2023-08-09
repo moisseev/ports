@@ -12,6 +12,7 @@ etc/newsyslog.conf.d/rspamd.newsyslog.conf
 %%ETCDIR%%/common.conf
 %%ETCDIR%%/composites.conf
 %%ETCDIR%%/groups.conf
+%%ETCDIR%%/lang_detection.inc
 %%ETCDIR%%/logging.inc
 %%ETCDIR%%/maps.d/dmarc_whitelist.inc
 %%ETCDIR%%/maps.d/maillist.inc
@@ -70,7 +71,6 @@ etc/newsyslog.conf.d/rspamd.newsyslog.conf
 %%ETCDIR%%/modules.d/trie.conf
 %%ETCDIR%%/modules.d/url_redirector.conf
 %%ETCDIR%%/modules.d/whitelist.conf
-%%ETCDIR%%/lang_detection.inc
 %%ETCDIR%%/options.inc
 %%ETCDIR%%/rspamd.conf
 @sample %%ETCDIR%%/rspamd.newsyslog.conf.sample
