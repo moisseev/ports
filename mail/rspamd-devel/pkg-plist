@@ -45,6 +45,7 @@ etc/newsyslog.conf.d/rspamd.newsyslog.conf
 %%ETCDIR%%/modules.d/hfilter.conf
 %%ETCDIR%%/modules.d/history_redis.conf
 %%ETCDIR%%/modules.d/http_headers.conf
+%%ETCDIR%%/modules.d/know_senders.conf
 %%ETCDIR%%/modules.d/maillist.conf
 %%ETCDIR%%/modules.d/metadata_exporter.conf
 %%ETCDIR%%/modules.d/metric_exporter.conf
@@ -272,6 +273,7 @@ man/man8/rspamd.8.gz
 %%DATADIR%%/plugins/history_redis.lua
 %%DATADIR%%/plugins/http_headers.lua
 %%DATADIR%%/plugins/ip_score.lua
+%%DATADIR%%/plugins/known_senders.lua
 %%DATADIR%%/plugins/maillist.lua
 %%DATADIR%%/plugins/maps_stats.lua
 %%DATADIR%%/plugins/metadata_exporter.lua
