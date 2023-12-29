@@ -348,9 +348,11 @@ man/man8/rspamd.8.gz
 %%DATADIR%%/www/img/desc.png
 %%DATADIR%%/www/img/rspamd_logo_navbar.png
 %%DATADIR%%/www/index.html
+%%DATADIR%%/www/js/app/common.js
 %%DATADIR%%/www/js/app/config.js
 %%DATADIR%%/www/js/app/graph.js
 %%DATADIR%%/www/js/app/history.js
+%%DATADIR%%/www/js/app/libft.js
 %%DATADIR%%/www/js/app/rspamd.js
 %%DATADIR%%/www/js/app/selectors.js
 %%DATADIR%%/www/js/app/stats.js
