@@ -222,6 +222,8 @@ man/man8/rspamd.8.gz
 %%DATADIR%%/lualib/plugins/neural.lua
 %%DATADIR%%/lualib/plugins/rbl.lua
 %%DATADIR%%/lualib/plugins_stats.lua
+%%DATADIR%%/lualib/redis_scripts/bayes_cache_check.lua
+%%DATADIR%%/lualib/redis_scripts/bayes_cache_learn.lua
 %%DATADIR%%/lualib/redis_scripts/bayes_classify.lua
 %%DATADIR%%/lualib/redis_scripts/bayes_learn.lua
 %%DATADIR%%/lualib/redis_scripts/bayes_stat.lua
