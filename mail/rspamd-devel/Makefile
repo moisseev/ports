@@ -33,7 +33,6 @@ CMAKE_ARGS+=	-DBUILD_PORT=yes \
 		-DGIT_ID=${GH_TAGNAME} \
 		-DLIBDIR=${PREFIX}/lib/rspamd \
 		-DLOGDIR=/var/log/rspamd \
-		-DMANDIR=${MANPREFIX}/man \
 		-DRUNDIR=/var/run/rspamd
 
 DEBUG_FLAGS=	-g -O0
