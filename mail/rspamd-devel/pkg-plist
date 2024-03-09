@@ -348,6 +348,7 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/www/fonts/glyphicons-halflings-regular.woff2
 %%DATADIR%%/www/img/asc.png
 %%DATADIR%%/www/img/desc.png
+%%DATADIR%%/www/img/drop-area.svg
 %%DATADIR%%/www/img/rspamd_logo_navbar.png
 %%DATADIR%%/www/index.html
 %%DATADIR%%/www/js/app/common.js
