@@ -27,6 +27,7 @@ etc/newsyslog.conf.d/rspamd.newsyslog.conf
 %%ETCDIR%%/modules.d/arc.conf
 %%ETCDIR%%/modules.d/asn.conf
 %%ETCDIR%%/modules.d/aws_s3.conf
+%%ETCDIR%%/modules.d/bayes_expiry.conf
 %%ETCDIR%%/modules.d/bimi.conf
 %%ETCDIR%%/modules.d/chartable.conf
 %%ETCDIR%%/modules.d/clickhouse.conf
