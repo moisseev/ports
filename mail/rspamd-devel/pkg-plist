@@ -15,6 +15,7 @@ etc/newsyslog.conf.d/rspamd.newsyslog.conf
 %%ETCDIR%%/lang_detection.inc
 %%ETCDIR%%/logging.inc
 %%ETCDIR%%/maps.d/dmarc_whitelist.inc
+%%ETCDIR%%/maps.d/exe_clickbait.inc
 %%ETCDIR%%/maps.d/maillist.inc
 %%ETCDIR%%/maps.d/mid.inc
 %%ETCDIR%%/maps.d/mime_types.inc
@@ -307,6 +308,7 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/plugins/trie.lua
 %%DATADIR%%/plugins/url_redirector.lua
 %%DATADIR%%/plugins/whitelist.lua
+%%DATADIR%%/rules/archives.lua
 %%DATADIR%%/rules/bitcoin.lua
 %%DATADIR%%/rules/bounce.lua
 %%DATADIR%%/rules/content.lua
