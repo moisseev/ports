@@ -43,6 +43,7 @@ etc/newsyslog.conf.d/rspamd.newsyslog.conf
 %%ETCDIR%%/modules.d/force_actions.conf
 %%ETCDIR%%/modules.d/forged_recipients.conf
 %%ETCDIR%%/modules.d/fuzzy_check.conf
+%%ETCDIR%%/modules.d/gpt.conf
 %%ETCDIR%%/modules.d/greylist.conf
 %%ETCDIR%%/modules.d/hfilter.conf
 %%ETCDIR%%/modules.d/history_redis.conf
@@ -278,6 +279,7 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/plugins/force_actions.lua
 %%DATADIR%%/plugins/forged_recipients.lua
 %%DATADIR%%/plugins/fuzzy_collect.lua
+%%DATADIR%%/plugins/gpt.lua
 %%DATADIR%%/plugins/greylist.lua
 %%DATADIR%%/plugins/hfilter.lua
 %%DATADIR%%/plugins/history_redis.lua
