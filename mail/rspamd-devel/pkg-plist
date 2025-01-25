@@ -335,6 +335,7 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/rules/regexp/headers.lua
 %%DATADIR%%/rules/regexp/misc.lua
 %%DATADIR%%/rules/regexp/upstream_spam_filters.lua
+%%DATADIR%%/rules/regexp/urls.lua
 %%DATADIR%%/rules/rspamd.lua
 %%DATADIR%%/rules/subject_checks.lua
 %%DATADIR%%/www/README.md
