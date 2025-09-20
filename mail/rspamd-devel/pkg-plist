@@ -161,8 +161,8 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/lualib/argparse.lua
 %%DATADIR%%/lualib/fun.lua
 %%DATADIR%%/lualib/global_functions.lua
-%%DATADIR%%/lualib/lpegre.lua
 %%DATADIR%%/lualib/llm_common.lua
+%%DATADIR%%/lualib/lpegre.lua
 %%DATADIR%%/lualib/lua_auth_results.lua
 %%DATADIR%%/lualib/lua_aws.lua
 %%DATADIR%%/lualib/lua_bayes_learn.lua
