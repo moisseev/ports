@@ -26,6 +26,7 @@ etc/newsyslog.conf.d/rspamd.newsyslog.conf
 %%ETCDIR%%/maps.d/surbl-whitelist.inc
 %%ETCDIR%%/metrics.conf
 %%ETCDIR%%/modules.conf
+%%ETCDIR%%/modules.d/aliases.conf
 %%ETCDIR%%/modules.d/antivirus.conf
 %%ETCDIR%%/modules.d/arc.conf
 %%ETCDIR%%/modules.d/asn.conf
@@ -46,6 +47,7 @@ etc/newsyslog.conf.d/rspamd.newsyslog.conf
 %%ETCDIR%%/modules.d/force_actions.conf
 %%ETCDIR%%/modules.d/forged_recipients.conf
 %%ETCDIR%%/modules.d/fuzzy_check.conf
+%%ETCDIR%%/modules.d/fuzzy_check_html.conf
 %%ETCDIR%%/modules.d/gpt.conf
 %%ETCDIR%%/modules.d/greylist.conf
 %%ETCDIR%%/modules.d/hfilter.conf
@@ -165,6 +167,7 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/lualib/llm_common.lua
 %%DATADIR%%/lualib/llm_context.lua
 %%DATADIR%%/lualib/lpegre.lua
+%%DATADIR%%/lualib/lua_aliases.lua
 %%DATADIR%%/lualib/lua_auth_results.lua
 %%DATADIR%%/lualib/lua_aws.lua
 %%DATADIR%%/lualib/lua_bayes_learn.lua
@@ -185,6 +188,7 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/lualib/lua_ffi/linalg.lua
 %%DATADIR%%/lualib/lua_ffi/spf.lua
 %%DATADIR%%/lualib/lua_fuzzy.lua
+%%DATADIR%%/lualib/lua_fuzzy_html.lua
 %%DATADIR%%/lualib/lua_lexer.lua
 %%DATADIR%%/lualib/lua_magic/heuristics.lua
 %%DATADIR%%/lualib/lua_magic/init.lua
@@ -273,6 +277,7 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/lualib/rspamadm/template.lua
 %%DATADIR%%/lualib/rspamadm/vault.lua
 %%DATADIR%%/lualib/tableshape.lua
+%%DATADIR%%/plugins/aliases.lua
 %%DATADIR%%/plugins/antivirus.lua
 %%DATADIR%%/plugins/arc.lua
 %%DATADIR%%/plugins/asn.lua
@@ -335,6 +340,7 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/rules/controller/neural.lua
 %%DATADIR%%/rules/controller/selectors.lua
 %%DATADIR%%/rules/forwarding.lua
+%%DATADIR%%/rules/fuzzy_html_phishing.lua
 %%DATADIR%%/rules/headers_checks.lua
 %%DATADIR%%/rules/html.lua
 %%DATADIR%%/rules/mid.lua
