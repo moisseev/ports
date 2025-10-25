@@ -356,12 +356,11 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/www/README.md
 %%DATADIR%%/www/apple-touch-icon.png
 %%DATADIR%%/www/browserconfig.xml
-%%DATADIR%%/www/css/FooTable.Glyphicons.css
+%%DATADIR%%/www/css/FooTable.FontAwesome.css
 %%DATADIR%%/www/css/bootstrap.min.css
 %%DATADIR%%/www/css/codejar-linenumbers.css
 %%DATADIR%%/www/css/d3evolution.css
 %%DATADIR%%/www/css/d3pie.css
-%%DATADIR%%/www/css/font-glyphicons.css
 %%DATADIR%%/www/css/footable.standalone.min.css
 %%DATADIR%%/www/css/nprogress.css
 %%DATADIR%%/www/css/prism.css
@@ -370,9 +369,6 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/www/favicon-16x16.png
 %%DATADIR%%/www/favicon-32x32.png
 %%DATADIR%%/www/favicon.ico
-%%DATADIR%%/www/fonts/glyphicons-halflings-regular.ttf
-%%DATADIR%%/www/fonts/glyphicons-halflings-regular.woff
-%%DATADIR%%/www/fonts/glyphicons-halflings-regular.woff2
 %%DATADIR%%/www/img/asc.png
 %%DATADIR%%/www/img/desc.png
 %%DATADIR%%/www/img/drop-area.svg
@@ -380,6 +376,7 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/www/index.html
 %%DATADIR%%/www/js/app/common.js
 %%DATADIR%%/www/js/app/config.js
+%%DATADIR%%/www/js/app/footable-fontawesome.js
 %%DATADIR%%/www/js/app/graph.js
 %%DATADIR%%/www/js/app/history.js
 %%DATADIR%%/www/js/app/libft.js
