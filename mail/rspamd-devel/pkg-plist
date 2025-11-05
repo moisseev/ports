@@ -47,7 +47,6 @@ etc/newsyslog.conf.d/rspamd.newsyslog.conf
 %%ETCDIR%%/modules.d/force_actions.conf
 %%ETCDIR%%/modules.d/forged_recipients.conf
 %%ETCDIR%%/modules.d/fuzzy_check.conf
-%%ETCDIR%%/modules.d/fuzzy_check_html.conf
 %%ETCDIR%%/modules.d/gpt.conf
 %%ETCDIR%%/modules.d/greylist.conf
 %%ETCDIR%%/modules.d/hfilter.conf
@@ -373,6 +372,7 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/www/img/desc.png
 %%DATADIR%%/www/img/drop-area.svg
 %%DATADIR%%/www/img/rspamd_logo_navbar.png
+%%DATADIR%%/www/img/rspamd_logo_navbar_dark.png
 %%DATADIR%%/www/index.html
 %%DATADIR%%/www/js/app/common.js
 %%DATADIR%%/www/js/app/config.js
