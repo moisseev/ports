@@ -78,6 +78,7 @@ etc/newsyslog.conf.d/rspamd.newsyslog.conf
 %%ETCDIR%%/modules.d/surbl.conf
 %%ETCDIR%%/modules.d/trie.conf
 %%ETCDIR%%/modules.d/url_redirector.conf
+%%ETCDIR%%/modules.d/url_suspect.conf
 %%ETCDIR%%/modules.d/whitelist.conf
 %%ETCDIR%%/modules.local.d/module.conf.example
 %%ETCDIR%%/options.inc
@@ -96,6 +97,7 @@ etc/newsyslog.conf.d/rspamd.newsyslog.conf
 %%ETCDIR%%/scores.d/statistics_group.conf
 %%ETCDIR%%/scores.d/subject_group.conf
 %%ETCDIR%%/scores.d/surbl_group.conf
+%%ETCDIR%%/scores.d/url_suspect_group.conf
 %%ETCDIR%%/scores.d/whitelist_group.conf
 %%ETCDIR%%/settings.conf
 %%ETCDIR%%/statistic.conf
@@ -229,6 +231,7 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/lualib/lua_smtp.lua
 %%DATADIR%%/lualib/lua_stat.lua
 %%DATADIR%%/lualib/lua_tcp_sync.lua
+%%DATADIR%%/lualib/lua_url_filter.lua
 %%DATADIR%%/lualib/lua_urls_compose.lua
 %%DATADIR%%/lualib/lua_util.lua
 %%DATADIR%%/lualib/lua_verdict.lua
@@ -329,6 +332,7 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/plugins/spf.lua
 %%DATADIR%%/plugins/trie.lua
 %%DATADIR%%/plugins/url_redirector.lua
+%%DATADIR%%/plugins/url_suspect.lua
 %%DATADIR%%/plugins/whitelist.lua
 %%DATADIR%%/rules/archives.lua
 %%DATADIR%%/rules/bitcoin.lua
