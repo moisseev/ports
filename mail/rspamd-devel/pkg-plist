@@ -228,6 +228,11 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/lualib/lua_selectors/maps.lua
 %%DATADIR%%/lualib/lua_selectors/transforms.lua
 %%DATADIR%%/lualib/lua_settings.lua
+%%DATADIR%%/lualib/lua_shape/core.lua
+%%DATADIR%%/lualib/lua_shape/docs.lua
+%%DATADIR%%/lualib/lua_shape/jsonschema.lua
+%%DATADIR%%/lualib/lua_shape/plugin_schema.lua
+%%DATADIR%%/lualib/lua_shape/registry.lua
 %%DATADIR%%/lualib/lua_smtp.lua
 %%DATADIR%%/lualib/lua_stat.lua
 %%DATADIR%%/lualib/lua_tcp_sync.lua
@@ -259,6 +264,7 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/lualib/rspamadm/clickhouse.lua
 %%DATADIR%%/lualib/rspamadm/configgraph.lua
 %%DATADIR%%/lualib/rspamadm/confighelp.lua
+%%DATADIR%%/lualib/rspamadm/confighelp_plugins.lua
 %%DATADIR%%/lualib/rspamadm/configwizard.lua
 %%DATADIR%%/lualib/rspamadm/cookie.lua
 %%DATADIR%%/lualib/rspamadm/corpus_test.lua
@@ -279,7 +285,6 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/lualib/rspamadm/statistics_dump.lua
 %%DATADIR%%/lualib/rspamadm/template.lua
 %%DATADIR%%/lualib/rspamadm/vault.lua
-%%DATADIR%%/lualib/tableshape.lua
 %%DATADIR%%/plugins/aliases.lua
 %%DATADIR%%/plugins/antivirus.lua
 %%DATADIR%%/plugins/arc.lua
