@@ -89,6 +89,7 @@ post-install:
 		${STAGEDIR}/var/db/rspamd \
 		${STAGEDIR}/var/run/rspamd
 	${RM} ${STAGEDIR}${DATADIR}/www/ARCHITECTURE.md
+	${RM} ${STAGEDIR}${DATADIR}/www/README.md
 	${RM} ${STAGEDIR}/${ETCDIR}/rspamd.conf.sample
 	# Linux specific
 	${RM} ${STAGEDIR}/${ETCDIR}/rspamd.systemd.conf
