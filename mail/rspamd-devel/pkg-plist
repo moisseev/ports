@@ -103,6 +103,8 @@ etc/newsyslog.conf.d/rspamd.newsyslog.conf
 %%ETCDIR%%/statistic.conf
 %%ETCDIR%%/worker-controller.inc
 %%ETCDIR%%/worker-fuzzy.inc
+%%HYPERSCAN%%%%ETCDIR%%/worker-hs_helper.conf
+%%HYPERSCAN%%%%ETCDIR%%/worker-hs_helper.inc
 %%ETCDIR%%/worker-normal.inc
 %%ETCDIR%%/worker-proxy.inc
 lib/rspamd/librspamd-actrie.so
@@ -191,6 +193,7 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/lualib/lua_ffi/spf.lua
 %%DATADIR%%/lualib/lua_fuzzy.lua
 %%DATADIR%%/lualib/lua_fuzzy_html.lua
+%%DATADIR%%/lualib/lua_hs_cache.lua
 %%DATADIR%%/lualib/lua_lexer.lua
 %%DATADIR%%/lualib/lua_magic/heuristics.lua
 %%DATADIR%%/lualib/lua_magic/init.lua
