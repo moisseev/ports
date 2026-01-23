@@ -62,6 +62,7 @@ etc/newsyslog.conf.d/rspamd.newsyslog.conf
 %%ETCDIR%%/modules.d/multimap.conf
 %%ETCDIR%%/modules.d/mx_check.conf
 %%ETCDIR%%/modules.d/neural.conf
+%%ETCDIR%%/modules.d/neural_autolearn.conf
 %%ETCDIR%%/modules.d/once_received.conf
 %%ETCDIR%%/modules.d/p0f.conf
 %%ETCDIR%%/modules.d/phishing.conf
@@ -204,6 +205,7 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/lualib/lua_meta.lua
 %%DATADIR%%/lualib/lua_mime.lua
 %%DATADIR%%/lualib/lua_mime_types.lua
+%%DATADIR%%/lualib/lua_neural_learn.lua
 %%DATADIR%%/lualib/lua_redis.lua
 %%DATADIR%%/lualib/lua_scanners/avast.lua
 %%DATADIR%%/lualib/lua_scanners/clamav.lua
