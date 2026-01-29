@@ -24,6 +24,7 @@ etc/newsyslog.conf.d/rspamd.newsyslog.conf
 %%ETCDIR%%/maps.d/redirectors.inc
 %%ETCDIR%%/maps.d/spf_dkim_whitelist.inc
 %%ETCDIR%%/maps.d/surbl-whitelist.inc
+%%ETCDIR%%/maps.d/suspicious_tlds.inc
 %%ETCDIR%%/metrics.conf
 %%ETCDIR%%/modules.conf
 %%ETCDIR%%/modules.d/aliases.conf
