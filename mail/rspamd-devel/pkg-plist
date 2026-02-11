@@ -1,3 +1,4 @@
+bin/mapstats
 bin/rspamadm
 bin/rspamadm-%%RSPAMDVERSION%%
 bin/rspamc
