@@ -198,6 +198,7 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/lualib/lua_fuzzy_html.lua
 %%DATADIR%%/lualib/lua_hs_cache.lua
 %%DATADIR%%/lualib/lua_lexer.lua
+%%DATADIR%%/lualib/lua_log_utils.lua
 %%DATADIR%%/lualib/lua_magic/heuristics.lua
 %%DATADIR%%/lualib/lua_magic/init.lua
 %%DATADIR%%/lualib/lua_magic/patterns.lua
@@ -283,6 +284,8 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/lualib/rspamadm/fuzzy_stat.lua
 %%DATADIR%%/lualib/rspamadm/grep.lua
 %%DATADIR%%/lualib/rspamadm/keypair.lua
+%%DATADIR%%/lualib/rspamadm/logstats.lua
+%%DATADIR%%/lualib/rspamadm/mapstats.lua
 %%DATADIR%%/lualib/rspamadm/mime.lua
 %%DATADIR%%/lualib/rspamadm/neural_test.lua
 %%DATADIR%%/lualib/rspamadm/publicsuffix.lua
