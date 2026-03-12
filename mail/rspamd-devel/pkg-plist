@@ -209,6 +209,7 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/lualib/lua_meta.lua
 %%DATADIR%%/lualib/lua_mime.lua
 %%DATADIR%%/lualib/lua_mime_types.lua
+%%DATADIR%%/lualib/lua_neural_external.lua
 %%DATADIR%%/lualib/lua_neural_learn.lua
 %%DATADIR%%/lualib/lua_redis.lua
 %%DATADIR%%/lualib/lua_scanners/avast.lua
@@ -291,6 +292,7 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/lualib/rspamadm/logstats.lua
 %%DATADIR%%/lualib/rspamadm/mapstats.lua
 %%DATADIR%%/lualib/rspamadm/mime.lua
+%%DATADIR%%/lualib/rspamadm/neural_export.lua
 %%DATADIR%%/lualib/rspamadm/neural_test.lua
 %%DATADIR%%/lualib/rspamadm/publicsuffix.lua
 %%DATADIR%%/lualib/rspamadm/ratelimit.lua
