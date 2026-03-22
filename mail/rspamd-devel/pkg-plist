@@ -273,6 +273,7 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/lualib/redis_scripts/ratelimit_check.lua
 %%DATADIR%%/lualib/redis_scripts/ratelimit_cleanup_pending.lua
 %%DATADIR%%/lualib/redis_scripts/ratelimit_update.lua
+%%DATADIR%%/lualib/rspamadm/autolearnstats.lua
 %%DATADIR%%/lualib/rspamadm/classifier_test.lua
 %%DATADIR%%/lualib/rspamadm/clickhouse.lua
 %%DATADIR%%/lualib/rspamadm/configgraph.lua
