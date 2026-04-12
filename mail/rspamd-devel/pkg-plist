@@ -217,6 +217,7 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/lualib/lua_scanners/cloudmark.lua
 %%DATADIR%%/lualib/lua_scanners/common.lua
 %%DATADIR%%/lualib/lua_scanners/dcc.lua
+%%DATADIR%%/lualib/lua_scanners/expurgate.lua
 %%DATADIR%%/lualib/lua_scanners/fprot.lua
 %%DATADIR%%/lualib/lua_scanners/icap.lua
 %%DATADIR%%/lualib/lua_scanners/init.lua
