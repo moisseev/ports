@@ -294,6 +294,7 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/lualib/rspamadm/keypair.lua
 %%DATADIR%%/lualib/rspamadm/logstats.lua
 %%DATADIR%%/lualib/rspamadm/mapstats.lua
+%%DATADIR%%/lualib/rspamadm/memstat.lua
 %%DATADIR%%/lualib/rspamadm/mime.lua
 %%DATADIR%%/lualib/rspamadm/neural_export.lua
 %%DATADIR%%/lualib/rspamadm/neural_test.lua
