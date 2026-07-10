@@ -261,6 +261,7 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/lualib/plugins/neural.lua
 %%DATADIR%%/lualib/plugins/neural/providers/fasttext_embed.lua
 %%DATADIR%%/lualib/plugins/neural/providers/llm.lua
+%%DATADIR%%/lualib/plugins/neural/providers/static_embed.lua
 %%DATADIR%%/lualib/plugins/neural/providers/symbols.lua
 %%DATADIR%%/lualib/plugins/neural/providers/text_hash.lua
 %%DATADIR%%/lualib/plugins/ratelimit.lua
@@ -388,16 +389,15 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/rules/subject_checks.lua
 %%DATADIR%%/www/apple-touch-icon.png
 %%DATADIR%%/www/browserconfig.xml
-%%DATADIR%%/www/css/FooTable.FontAwesome.css
 %%DATADIR%%/www/css/bootstrap.min.css
 %%DATADIR%%/www/css/codejar-linenumbers.css
 %%DATADIR%%/www/css/d3evolution.css
 %%DATADIR%%/www/css/d3pie.css
-%%DATADIR%%/www/css/footable.standalone.min.css
 %%DATADIR%%/www/css/nprogress.css
 %%DATADIR%%/www/css/prism.css
 %%DATADIR%%/www/css/rspamd.css
 %%DATADIR%%/www/css/svg-with-js.min.css
+%%DATADIR%%/www/css/tabulator_bs5.min.css
 %%DATADIR%%/www/favicon-16x16.png
 %%DATADIR%%/www/favicon-32x32.png
 %%DATADIR%%/www/favicon.ico
@@ -409,7 +409,6 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/www/index.html
 %%DATADIR%%/www/js/app/common.js
 %%DATADIR%%/www/js/app/config.js
-%%DATADIR%%/www/js/app/footable-fontawesome.js
 %%DATADIR%%/www/js/app/graph.js
 %%DATADIR%%/www/js/app/history.js
 %%DATADIR%%/www/js/app/libft.js
@@ -417,6 +416,7 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/www/js/app/selectors.js
 %%DATADIR%%/www/js/app/stats.js
 %%DATADIR%%/www/js/app/symbols.js
+%%DATADIR%%/www/js/app/tab-utils.js
 %%DATADIR%%/www/js/app/upload.js
 %%DATADIR%%/www/js/lib/bootstrap.bundle.min.js
 %%DATADIR%%/www/js/lib/codejar-linenumbers.min.js
@@ -425,13 +425,13 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/www/js/lib/d3evolution.min.js
 %%DATADIR%%/www/js/lib/d3pie.min.js
 %%DATADIR%%/www/js/lib/fontawesome.min.js
-%%DATADIR%%/www/js/lib/footable.min.js
 %%DATADIR%%/www/js/lib/jquery-3.7.1.min.js
 %%DATADIR%%/www/js/lib/jquery.stickytabs.min.js
 %%DATADIR%%/www/js/lib/nprogress.min.js
 %%DATADIR%%/www/js/lib/prism.js
 %%DATADIR%%/www/js/lib/require.min.js
 %%DATADIR%%/www/js/lib/solid.min.js
+%%DATADIR%%/www/js/lib/tabulator.min.js
 %%DATADIR%%/www/js/lib/visibility.min.js
 %%DATADIR%%/www/js/main.js
 %%DATADIR%%/www/mstile-150x150.png
