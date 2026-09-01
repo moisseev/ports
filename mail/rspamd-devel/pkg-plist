@@ -186,8 +186,10 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/lualib/lua_cfg_transform.lua
 %%DATADIR%%/lualib/lua_cfg_utils.lua
 %%DATADIR%%/lualib/lua_clickhouse.lua
+%%DATADIR%%/lualib/lua_content/docx.lua
 %%DATADIR%%/lualib/lua_content/ical.lua
 %%DATADIR%%/lualib/lua_content/init.lua
+%%DATADIR%%/lualib/lua_content/ooxml.lua
 %%DATADIR%%/lualib/lua_content/pdf.lua
 %%DATADIR%%/lualib/lua_content/vcard.lua
 %%DATADIR%%/lualib/lua_cta.lua
