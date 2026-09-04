@@ -21,6 +21,7 @@ etc/newsyslog.conf.d/rspamd.newsyslog.conf
 %%ETCDIR%%/lua.local.d/regexps/example.lua.example
 %%ETCDIR%%/lua.local.d/selectors/example.lua.example
 %%ETCDIR%%/maps.d/dmarc_whitelist.inc
+%%ETCDIR%%/maps.d/equivalent_domains.inc
 %%ETCDIR%%/maps.d/exe_clickbait.inc
 %%ETCDIR%%/maps.d/maillist.inc
 %%ETCDIR%%/maps.d/mid.inc
