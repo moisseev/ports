@@ -159,6 +159,7 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/languages/pt.json
 %%DATADIR%%/languages/ro.json
 %%DATADIR%%/languages/ru.json
+%%DATADIR%%/languages/sk.json
 %%DATADIR%%/languages/sl.json
 %%DATADIR%%/languages/so.json
 %%DATADIR%%/languages/sq.json
