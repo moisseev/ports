@@ -193,7 +193,10 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/lualib/lua_content/init.lua
 %%DATADIR%%/lualib/lua_content/ooxml.lua
 %%DATADIR%%/lualib/lua_content/pdf.lua
+%%DATADIR%%/lualib/lua_content/pptx.lua
+%%DATADIR%%/lualib/lua_content/svg.lua
 %%DATADIR%%/lualib/lua_content/vcard.lua
+%%DATADIR%%/lualib/lua_content/xlsx.lua
 %%DATADIR%%/lualib/lua_cta.lua
 %%DATADIR%%/lualib/lua_dkim_tools.lua
 %%DATADIR%%/lualib/lua_extras.lua
