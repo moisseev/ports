@@ -407,7 +407,7 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/www/css/nprogress.css
 %%DATADIR%%/www/css/prism.css
 %%DATADIR%%/www/css/rspamd.css
-%%DATADIR%%/www/css/tabulator_bs5.min.css
+%%DATADIR%%/www/css/tabulator_bootstrap5.min.css
 %%DATADIR%%/www/favicon-16x16.png
 %%DATADIR%%/www/favicon-32x32.png
 %%DATADIR%%/www/favicon.ico
