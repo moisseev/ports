@@ -197,6 +197,7 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/lualib/lua_content/svg.lua
 %%DATADIR%%/lualib/lua_content/vcard.lua
 %%DATADIR%%/lualib/lua_content/xlsx.lua
+%%DATADIR%%/lualib/lua_crypto_addresses.lua
 %%DATADIR%%/lualib/lua_cta.lua
 %%DATADIR%%/lualib/lua_dkim_tools.lua
 %%DATADIR%%/lualib/lua_extras.lua
@@ -265,6 +266,7 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/lualib/lua_verdict.lua
 %%DATADIR%%/lualib/lupa.lua
 %%DATADIR%%/lualib/plugins/dmarc.lua
+%%DATADIR%%/lualib/plugins/metadata_exporter.lua
 %%DATADIR%%/lualib/plugins/neural.lua
 %%DATADIR%%/lualib/plugins/neural/providers/fasttext_embed.lua
 %%DATADIR%%/lualib/plugins/neural/providers/llm.lua
@@ -375,7 +377,6 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/plugins/url_suspect.lua
 %%DATADIR%%/plugins/whitelist.lua
 %%DATADIR%%/rules/archives.lua
-%%DATADIR%%/rules/bitcoin.lua
 %%DATADIR%%/rules/bounce.lua
 %%DATADIR%%/rules/content.lua
 %%DATADIR%%/rules/controller/fuzzy.lua
@@ -383,6 +384,7 @@ share/man/man8/rspamd.8.gz
 %%DATADIR%%/rules/controller/maps.lua
 %%DATADIR%%/rules/controller/neural.lua
 %%DATADIR%%/rules/controller/selectors.lua
+%%DATADIR%%/rules/crypto.lua
 %%DATADIR%%/rules/forwarding.lua
 %%DATADIR%%/rules/fuzzy_html_phishing.lua
 %%DATADIR%%/rules/headers_checks.lua
