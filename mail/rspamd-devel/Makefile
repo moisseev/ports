@@ -1,5 +1,5 @@
 PORTNAME=	rspamd
-PORTVERSION=	4.2.4.a1.20261102
+PORTVERSION=	4.2.4.a1.20261108
 CATEGORIES=	mail
 PKGNAMESUFFIX=	-devel
 
@@ -20,7 +20,7 @@ USES=		cmake compiler:c++20-lang cpe gnome libarchive perl5 pkgconfig \
 		sqlite ssl
 CPE_VENDOR=	${PORTNAME}_project
 USE_GITHUB=	yes
-GH_TAGNAME=	c08eb7c
+GH_TAGNAME=	854c750
 USE_GNOME=	glib20
 USE_LDCONFIG=	yes
 USE_PERL5=	build run
